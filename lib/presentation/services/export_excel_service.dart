@@ -15,43 +15,43 @@ class ExportExcelService {
 
     // ورقة الملخص
     summarySheet.appendRow(
-        [const TextCellValue('البند'), const TextCellValue('القيمة')]);
+        [TextCellValue('البند'), TextCellValue('القيمة')]);
     summarySheet.appendRow([
-      const TextCellValue('إجمالي المقدمات'),
+      TextCellValue('إجمالي المقدمات'),
       DoubleCellValue(result.totalDownPayments)
     ]);
     summarySheet.appendRow([
-      const TextCellValue('إجمالي الأقساط السابقة'),
+      TextCellValue('إجمالي الأقساط السابقة'),
       DoubleCellValue(result.totalPreviousInstallments)
     ]);
     summarySheet.appendRow([
-      const TextCellValue('إجمالي الأقساط المستقبلية'),
+      TextCellValue('إجمالي الأقساط المستقبلية'),
       DoubleCellValue(result.totalFutureInstallments)
     ]);
     summarySheet.appendRow([
-      const TextCellValue('إجمالي التكلفة النهائية'),
+      TextCellValue('إجمالي التكلفة النهائية'),
       DoubleCellValue(result.totalFinalCost)
     ]);
     summarySheet.appendRow([
-      const TextCellValue('متوسط القسط'),
+      TextCellValue('متوسط القسط'),
       DoubleCellValue(result.averageInstallment)
     ]);
     summarySheet.appendRow([
-      const TextCellValue('أعلى قسط'),
+      TextCellValue('أعلى قسط'),
       DoubleCellValue(result.maxInstallment)
     ]);
     summarySheet.appendRow([
-      const TextCellValue('أقل قسط'),
+      TextCellValue('أقل قسط'),
       DoubleCellValue(result.minInstallment)
     ]);
 
     // ورقة الجدول السنوي
     scheduleSheet.appendRow([
-      const TextCellValue('السنة'),
-      const TextCellValue('القسط الشهري'),
-      const TextCellValue('إجمالي السنة'),
-      const TextCellValue('الزيادة'),
-      const TextCellValue('إجمالي متراكم'),
+      TextCellValue('السنة'),
+      TextCellValue('القسط الشهري'),
+      TextCellValue('إجمالي السنة'),
+      TextCellValue('الزيادة'),
+      TextCellValue('إجمالي متراكم'),
     ]);
     for (final row in result.yearlySchedule) {
       scheduleSheet.appendRow([
